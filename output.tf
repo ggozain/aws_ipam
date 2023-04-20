@@ -15,7 +15,7 @@ output "private_scope_id" {
 
 output "ipam_parent_pool_id" {
   description = "The IPAM parent pool id"
-  value       = aws_vpc_ipam_pool.parent.id
+  value       = aws_vpc_ipam_pool.child.id
 }
 
 # output "ipam_child_pool_id" {
