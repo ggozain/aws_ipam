@@ -6,6 +6,7 @@ variable "aws_region" {
 variable "ipam_regions" {
   type    = list(any)
   default = []
+  description = "The IPAM regions (can be single or multi region IPAM)"
 }
 
 variable "tf_cloud_organization" {
@@ -17,3 +18,14 @@ variable "tf_cloud_workspace" {
   type        = string
   description = "The workspace of Terraform Cloud where remote state is stored"
 }
+
+variable "parent_pool_cidr" {
+  type                = string
+  description = "Parent pool CIDR to be created"
+}
+
+# variable "child_pool_cidr_region_map" {
+#   type = map(string)
+#   description = "Child pools to be created mapped to the desired region on which to be created"
+  
+# }
