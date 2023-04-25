@@ -22,15 +22,3 @@ output "ipam_child_pool_cidr" {
   description = "The IPAM parent pool id"
   value       = aws_vpc_ipam_pool_cidr.child.cidr
 }
-
-output "ipam_child_pool_netmask_length" {
-  description = "The IPAM child pool netmask length"
-  value       = aws_vpc_ipam_pool.child.allocation_default_netmask_length
-}
-
-# output "ipam_child_pool_id" {
-#   description = "The IPAM child pool ids"
-#   value       = { for id, cidr in aws_vpc_ipam_pool_cidr.child :
-#   id => cidr
-# }
-# }
