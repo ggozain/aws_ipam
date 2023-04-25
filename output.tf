@@ -24,8 +24,8 @@ output "ipam_child_pool_cidr" {
 }
 
 output "ipam_child_pool_netmask_length" {
-  description = "The IPAM parent pool id"
-  value       = aws_vpc_ipam_pool.child.allocation_default_netmask_length
+  description = "The IPAM child pool netmask length"
+  value       = aws_vpc_ipam_pool.child.pool_depth
 }
 
 # output "ipam_child_pool_id" {
