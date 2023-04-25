@@ -4,6 +4,10 @@ locals {
 
 }
 
+resource "aws_default_vpc" "default" {
+  force_destroy = true
+}
+
 resource "aws_vpc_ipam" "main" {
   description = "Multi region ipam"
   dynamic "operating_regions" {

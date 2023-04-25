@@ -25,7 +25,7 @@ variable "parent_pool_cidr" {
 }
 
 variable "child_pool_cidr" {
-  type = string
+  type        = string
   description = "Child pool cidr block)"
 
 }
